@@ -28,38 +28,50 @@ format:
 
 ## Declaration of Authorship {.unnumbered .unlisted}
 
-I, [insert your name], confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
+I, Jiaxuan Fan, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
 
-['Sign' your name here]
+Jiaxuan Fan
 
 Date:
 
-Student Number: 
+Student Number: 22103692
 New File
 ## Who collected the data?
 
-An inline citation: As discussed on @insideairbnb, there are many...
-
-A parenthetical citation: There are many ways to research Airbnb [see, for example, @insideairbnb].
-
-The data was downloaded from the website INSIDE Airbnb and collected mainly by researcher Murray Cox and other collaborators.
+The data was downloaded from the website Inside Airbnb and collected mainly by researcher Murray Cox and other collaborators (Inside Airbnb, 2016).
 
 ## Why did they collect it?
 
-To analyse the impact of Airbnb short term rentals on residential communities by collecting information on listings in different areas on Airbnb. 
-
-The aim of the website is to help communities understand and control the impact of renting out residential homes to tourists(Cox, 2017).
-
-In addition, the website provides a platform for scholars to engage in academic communication
+To analyse the impact of Airbnb short term rentals on residential communities by collecting information on listings in different areas on Airbnb. The aim of the website is to help communities understand and control the impact of renting out residential homes to tourists (Inside Airbnb, 2016). In addition, the website provides a platform for scholars to engage in academic communication.
 
 ## How was it collected?
 
+Firstly, it retrieves all listings within the London area by retrieving them from the Airbnb website, and then performs web scraping of these listing web pages, compiling and collating this publicly available listing data through python. The dataset provides a point-in-time snapshot of all listings available in London(Cox, 2017). It mostly contains information about the listings (e.g. type and price of the house, reviews about the house), information about the hosts. As data is publicly available on Airbnb, it has a good breadth, but accuracy may not be guaranteed, for instance, data may be missing or there may be duplicate data may be lost or duplicated.
+
 ## What useful information does it contain?
+
+The data set collects information about the web pages(id, URL), the geographic location of the listings( latitude and longitude), the characteristics of hosts and the listings.
+Host information including the host's name, and profile photo, the total number of listings and whether the host is a super host.
+The information on listings including price and type of property, facilities, type of room (bedrooms, bathroom), neighbourhood environment and the reviews of the listing.
+The researchers can use geographic data to analyze the spatial distribution of housing in London. Through the analysis of Airbnb user reviews, researchers can explore the user experience and improve our understanding of the tourism and hospitality industry.
+However, when using the data, the limitations of the accuracy and timeliness of the data set should be noticed.
 
 ## To what extent is the data 'complete'?
 
+In terms of the breadth of the data, it is relatively comprehensive and covers most of the data information available on Airbnb.  Researchers can obtain an overall picture of short-term rental prices across the whole London area by analysing the prices of all listings and examining their maximum, minimum and median values. By analysing information on price, location, type of property, and reviews of properties, it is possible to understand the characteristics of the most popular houses in London. Furthermore, the classification of data information is detailed. The rating of a listing covers specific comments on a particular service, such as cleanliness, the accuracy of the description and communication with the host. In general, on the breadth and type of data, this data set can paint a 'complete' picture of Airbnb's operations in London.
+In terms of the accuracy of the data, however, it has some errors. The first is that it is not current, some listings are unavailable but still exist on the website to remain available for rent. The second is that the data is not accurate enough, there are missing or duplicate values. It is essential to deal with NaNs and Nulls in the data set. Therefore, whatever data the researcher wants to use, the researcher should check and wash it before using it.
+
 ## What kinds of analysis would this support?
 
+This data supports geospatial data analysis. By analyzing the latitude and longitude data distribution of listings, scholars can explore the spatial distribution characteristics of housing resources in London. Xu collected the location data about 29,780 houses/apartments on Airbnb in London and applied Ordinal Least Square and Geography Weighed Regression analysis to explore the spatial distribution relationship between Airbnb and the neighbourhood environment (Xu, 2019).
+It can be studied the influence of geographical location, housing type and housing facilities on housing prices by the regression analysis. Zhang adopted the general linear model (GLM) and the geographically weighted regression (GWR) model, using regression analysis to study the influence of geographical location, housing types and housing facilities on housing prices (Zhang, 2017).
+By analysing the various ratings of listings, such as the rating of locations, the service of the host, and the amenities of the house, it is possible to explore the factors that influence user satisfaction and explore user preferences for renting. Zhu explores the predictors of customer satisfaction by analysing customer rating scores for different aspects of the listing. The results show that effective communication can increase guest satisfaction. In general, the stricter the policy (or more demanding), the lower the guest satisfaction (Zhu, 2019).
+
 ## Which of the analyses outlined above are ethical?
+
+When discussing whether the analysis is ethical, we can divide it into two parts, namely, whether the purpose of the analysis is ethical and whether the process and the method of analysis are ethical.
+In terms of the purpose of the analysis, geospatial analysis is to investigate the spatial distribution of listings across London and its contribution to helping people study housing policy, which kind of purpose is ethical.The customer satisfaction analysis is aimed at exploring the factors that influence customer satisfaction. The results of this kind of analysis can support hosts to make improvements to their houses, thereby enhancing the user experience and enabling the development of the housing market.
+To ensure that the analysis is ethical, privacy and consent in data use play an important role (Crawford and Finn, 2015). When hosts' information is analyzed, their private information, such as name, age, personal photos, ethnicity, etc., may be violated, so it is essential to anonymise them during the process of analysis. Besides, when analysing data, it is important to ensure that the data is transparent and reliable. In addition, the sources of data should be accurate and honest. In order to influence the media and public opinion, Airbnb removed listings from its website so that its dataset would reflect a more attractive picture of its business (Cox and Slee, 2016). This is an unethical approach by Airbnb.
+Data is a reflection of the results of unequal social relations. As a result, it is necessary to conduct an accurate and ethical analysis in this context (Kanarinka and Klein, 2020). Identifying, quantifying and resolving data bias, as well as the methodological and ethical challenges surrounding the use of analytical data, will remain a persistent and important issue for years to come.
 
 ## References
